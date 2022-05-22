@@ -37,3 +37,6 @@ logs/
 
 ### upload-dir
 upload-dir/
+
+### db config
+src/main/resources/db.properties

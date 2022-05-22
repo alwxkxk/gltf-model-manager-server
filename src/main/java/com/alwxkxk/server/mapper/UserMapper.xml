@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace
+命名空间，用于绑定一个对应的DAO/Mapper接口,这里和UserMapper绑定。
+这样相当于写了一个实现类来实现此接口。
+-->
+<mapper namespace="com.alwxkxk.server.mapper.UserMapper">
+
+    <select id="getUserList" resultType="com.alwxkxk.server.dto.User">
+        select * from user
+    </select>
+
+    <!-- #{id}会被预编译成？号，只有一个参数时参数名称可以随便写 -->
+    <select id="getUserById" resultType="com.alwxkxk.server.dto.User">
+        select * from user where id=#{id}
+    </select>
+
+    <!--参数是类或者map时，参数名称必须和类中的属性名/map中的key相同-->
+    <insert id="addUser" parameterType="com.alwxkxk.server.dto.User">
+        insert into user(id,name,pwd) values(#{id},#{name},#{pwd})
+    </insert>
+
+    <update id="updateUser"  parameterType="com.alwxkxk.server.dto.User">
+        update user set name=#{name},pwd=#{pwd} where id=#{id}
+    </update>
+
+    <delete id="deleteUser">
+        delete from user where id=#{id}
+    </delete>
+</mapper>

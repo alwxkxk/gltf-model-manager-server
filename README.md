@@ -5,6 +5,9 @@
 - 数据库：MySQL 8
 - java版本： openjdk 17
 - 配置信息在 `resources/application.properties`
+- 数据库配置信息需手动创建配置：`src/main/resources/db.properties`，模板可参考`db_example.properties`。
+
+
 
 ## 业务逻辑
 前端3D场景编辑，是通过model_info的name进行绑定。每个模型加载时也先通过name找到当先使用版本的model入口文件进行加载。

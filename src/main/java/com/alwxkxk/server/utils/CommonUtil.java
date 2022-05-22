@@ -1,4 +1,4 @@
-package com.alwxkxk.server.entity;
+package com.alwxkxk.server.utils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
