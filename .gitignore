@@ -39,4 +39,4 @@ logs/
 upload-dir/
 
 ### db config
-src/main/resources/db.properties
+application.properties

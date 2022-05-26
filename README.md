@@ -4,8 +4,8 @@
 - 本项目使用lombok，开发时IDE需要安装对应插件。
 - 数据库：MySQL 8
 - java版本： openjdk 17
-- 配置信息在 `resources/application.properties`
-- 数据库配置信息需手动创建配置：`src/main/resources/db.properties`，模板可参考`db_example.properties`。
+- 需要自行配置`resources/application.properties`,特别是正确配置数据库的信息，数据库url、帐号、密码等，可参考`resources/application-example.properties`。
+
 
 
 
